@@ -44,6 +44,7 @@
  * Version 0.9.3    26.11.2012                                               *
  * Version 0.9.4    05.01.2013  Anpassung CAN-Logging                        *
  * Version 0.9.5    24.02.2013  Ueberarbeitung USB-Zugriff                   *
+ *****************************************************************************
  * Fork: husky-koglhof 
  * Version 0.9.6    21.06.2015  Deaktivieren der Anzeige port gesetzt und CAN-Logging, husky-koglhof
 * $Id$.     *
