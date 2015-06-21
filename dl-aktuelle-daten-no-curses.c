@@ -44,6 +44,8 @@
  * Version 0.9.3    26.11.2012                                               *
  * Version 0.9.4    05.01.2013  Anpassung CAN-Logging                        *
  * Version 0.9.5    24.02.2013  Ueberarbeitung USB-Zugriff                   *
+ * Fork: husky-koglhof 
+ * Version 0.9.6    21.06.2015  Deaktivieren der Anzeige port gesetzt und CAN-Logging, husky-koglhof
 * $Id$.     *
  *****************************************************************************/
 
@@ -224,7 +226,8 @@ int main(int argc, char *argv[])
   
   uvr_modus = get_modulmodus(); /* Welcher Modus 
                                 0xA8 (1DL) / 0xD1 (2DL) / 0xDC (CAN) */
-fprintf(stderr, " CAN-Logging: uvr_modus -> %2X \n", uvr_modus);								
+// husky-koglhof: do not show
+// fprintf(stderr, " CAN-Logging: uvr_modus -> %2X \n", uvr_modus);								
 
   if ( uvr_modus == 0xDC )
   {
@@ -876,7 +879,8 @@ int check_arg_getopt(int arg_c, char *arg_v[])
         {
           // sollte /dev/ttyUSBnn sein
           strncpy(dlport, optarg , strlen(optarg));
-          fprintf(stderr,"\n port gesetzt: %s\n", dlport);
+// husky-koglhof: do not show
+	  // fprintf(stderr,"\n port gesetzt: %s\n", dlport);
           p_is_set=1;
           usb_zugriff = 1; /* 05.02. neu */
         }
